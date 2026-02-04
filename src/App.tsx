@@ -12,7 +12,7 @@ function App() {
 		<>
 			<header>
 				<Hero
-					img='./public/cdb49f4f897889c109d06ae709eea2f5f2468a6f.png'
+					img='./cdb49f4f897889c109d06ae709eea2f5f2468a6f.png'
 					title={
 						<>
 							Čisté prádlo <span className='highlight'>včas</span>. <br />I v{" "}
