@@ -1,0 +1,32 @@
+.footer-container {
+	background: var(--primary-color);
+	color: var(--white-color);
+
+	p {
+		color: var(--white-color);
+	}
+
+	svg {
+		filter: brightness(0) invert(1);
+	}
+
+	.footer {
+		max-width: 1260px;
+		display: flex;
+		justify-content: space-between;
+		gap: 3rem;
+		margin: 2rem auto;
+		padding-top: 4rem;
+	}
+
+	.footer-bottom {
+		max-width: 1260px;
+		display: flex;
+		justify-content: space-between;
+		gap: 3rem;
+		margin: 0 auto;
+
+		padding: 2rem 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+	}
+}

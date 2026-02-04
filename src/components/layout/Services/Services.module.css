@@ -1,0 +1,38 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(297px, 1fr));
+	gap: 24px;
+	justify-items: center;
+
+	.card {
+		background-color: #a7cfaf;
+		background: var(--tertiary-color);
+		/* border: 1px solid var(--tertiary-color); */
+		border-radius: var(--border-radius-big);
+		padding: 5rem 16px 2rem 16px;
+		text-align: center;
+		display: grid;
+		gap: 10px;
+		max-width: 297px;
+
+		img {
+			width: 40px;
+			height: 40px;
+			margin: 0 auto 4px;
+			display: block;
+		}
+
+		h4 {
+			font-size: 16px;
+			line-height: 1.2;
+			margin: 0;
+		}
+
+		p {
+			font-size: 13px;
+			line-height: 1.4;
+			color: #5c5c5c;
+			margin: 0;
+		}
+	}
+}

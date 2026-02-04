@@ -1,0 +1,17 @@
+.features {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	padding-block: 2rem;
+	border-bottom: 1px solid var(--border-color);
+
+	img {
+		margin-right: 0.5rem;
+	}
+
+	span {
+		display: flex;
+	}
+}
