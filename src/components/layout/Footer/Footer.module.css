@@ -53,6 +53,7 @@
 				img {
 					/* width: 24px; */
 					margin-right: 0.5rem;
+					filter: brightness(1) invert(1);
 				}
 			}
 		}
