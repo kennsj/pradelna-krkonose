@@ -5,7 +5,7 @@ const Feature = ({ features }: { features: string[] }) => {
 		<div className={styles.features}>
 			{features.map((feature) => (
 				<span key={feature}>
-					<img src='./public/CheckCircle.svg' alt='Check Circle' />
+					<img src='./CheckCircle.svg' alt='Check Circle' />
 					{feature}
 				</span>
 			))}

@@ -4,7 +4,7 @@ const Nav = () => {
 	return (
 		<nav className={styles.nav}>
 			<a href='/'>
-				<img src='./public/logo.svg' alt='Prádelna logo' />
+				<img src='./logo.svg' alt='Prádelna logo' />
 			</a>
 			<div className={styles.links}>
 				<a href='/#'>Služby</a>
