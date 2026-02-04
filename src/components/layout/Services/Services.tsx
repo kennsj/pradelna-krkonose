@@ -11,6 +11,7 @@ const Services = () => {
 				paragraph='Postaráme se o praní, sušení, mandlování i logistiku prádla. Spolehlivě, pravidelně a s ohledem na sezónní vytížení vašeho provozu.'
 				align='center'
 				centered={true}
+				dataWidth='narrow'
 			/>
 			<div className={styles.cards}>
 				<ServiceCard

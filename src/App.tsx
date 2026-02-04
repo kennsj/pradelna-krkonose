@@ -12,7 +12,7 @@ function App() {
 		<>
 			<header>
 				<Hero
-					img='./cdb49f4f897889c109d06ae709eea2f5f2468a6f.png'
+					img='./public/cdb49f4f897889c109d06ae709eea2f5f2468a6f.png'
 					title={
 						<>
 							Čisté prádlo <span className='highlight'>včas</span>. <br />I v{" "}
@@ -49,7 +49,7 @@ function App() {
 							mandlování prádla pro hotely, penziony, horské chaty, restaurace a
 							další provozy.
 						</p>
-						<p>
+						<p className='bold'>
 							Prádlo zpracováváme v souladu s hygienickými standardy, s důrazem
 							na kvalitu a spolehlivost.
 						</p>

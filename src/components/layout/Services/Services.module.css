@@ -1,19 +1,33 @@
 .cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(297px, 1fr));
+	grid-template-columns: repeat(4, 1fr);
 	gap: 24px;
 	justify-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 1200px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media screen and (max-width: 640px) {
+		grid-template-columns: 1fr;
+	}
 
 	.card {
 		background-color: #a7cfaf;
 		background: var(--tertiary-color);
-		/* border: 1px solid var(--tertiary-color); */
 		border-radius: var(--border-radius-big);
 		padding: 5rem 16px 2rem 16px;
 		text-align: center;
 		display: grid;
 		gap: 10px;
+		width: 100%;
 		max-width: 297px;
+
+		@media screen and (max-width: 1200px) {
+			max-width: none;
+		}
 
 		img {
 			width: 40px;
@@ -23,8 +37,6 @@
 		}
 
 		h4 {
-			font-size: 16px;
-			line-height: 1.2;
 			margin: 0;
 		}
 

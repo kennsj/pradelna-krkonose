@@ -9,6 +9,7 @@ type IntroProps = {
 	children?: React.ReactNode
 	align?: "left" | "center" | "right"
 	centered?: boolean
+	dataWidth?: "narrow"
 }
 
 const Intro = ({
@@ -20,9 +21,15 @@ const Intro = ({
 	children,
 	align = "center",
 	centered = false,
+	dataWidth,
 }: IntroProps) => {
 	return (
-		<div className='intro' data-align={align} data-centered={centered}>
+		<div
+			className='intro'
+			data-align={align}
+			data-centered={centered}
+			data-width={dataWidth}
+		>
 			<Heading as='h5'>{overline}</Heading>
 			<Heading as='h2'>{title}</Heading>
 			<p>{paragraph}</p>

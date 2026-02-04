@@ -10,13 +10,13 @@
 
 	background: #f5f5f4;
 
-	--primary-color: #3b82f6;
-	--secondary-color: #14b8a6;
+	--primary-color: #fcb627;
+	--secondary-color: #079aae;
 	--tertiary-color: #dbeafe;
 
-	--primary-color: #0ea5e9;
+	/* --primary-color: #0ea5e9;
 	--secondary-color: #06b6d4;
-	--tertiary-color: #e0f2fe;
+	--tertiary-color: #e0f2fe; */
 
 	--white-color: #ffffff;
 	--white-bg-color: #f8fafc;
@@ -71,17 +71,28 @@ section {
 	width: 100%;
 	margin: 5rem auto;
 	padding: 0 3rem;
+
+	@media screen and (max-width: 768px) {
+		/* width: 90%; */
+		padding: 0 1.5rem;
+	}
 }
 
 p {
+	font-size: 18px;
 	margin-block: 1rem;
 	color: #333333;
+
+	@media screen and (max-width: 1024px) {
+		font-size: clamp(0.9rem, 2vw, 1rem);
+		line-height: clamp(1.4rem, 3vw, 1.6rem);
+	}
 }
 
 h1 {
 	font-family: "General Sans", sans-serif;
-	font-size: 3.2em;
-	line-height: 1.1;
+	font-size: clamp(2.5rem, 4vw, 3.5rem);
+	line-height: clamp(2.75rem, 5vw, 4rem);
 	font-weight: 500;
 }
 
@@ -113,12 +124,6 @@ a {
 	text-decoration: none;
 	color: inherit;
 	transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-
-	&:hover {
-		color: var(--secondary-color);
-		text-decoration: underline;
-		transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-	}
 }
 
 button {
@@ -138,11 +143,16 @@ button:focus-visible {
 }
 
 .intro {
-	width: 70%;
-	/* margin: 0 auto; */
-
 	h2 {
 		margin-block: 1rem;
+	}
+
+	&[data-width="narrow"] {
+		width: 70%;
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
 	}
 
 	&[data-centered="true"] {
@@ -164,12 +174,21 @@ button:focus-visible {
 	color: var(--secondary-color);
 }
 
+.bold {
+	font-weight: 600;
+}
+
 .how-it-works {
 	display: flex;
 	flex-direction: row;
 	gap: 2.5rem;
 	padding: 2rem 0;
-	align-items: flex-start;
+	align-items: stretch;
+	min-height: 600px;
+
+	@media screen and (max-width: 900px) {
+		min-height: auto;
+	}
 
 	> div {
 		width: 50%;
@@ -180,7 +199,11 @@ button:focus-visible {
 		border-radius: var(--border-radius-big);
 		overflow: hidden;
 		padding: 0.5rem;
-		background: var(--white-color);
+
+		@media screen and (max-width: 900px) {
+			height: auto;
+			min-height: auto;
+		}
 
 		img {
 			width: 100%;
@@ -212,11 +235,11 @@ button:focus-visible {
 	.steps::before {
 		content: "";
 		position: absolute;
-		/* left: 13px; */
-		/* top: 6px; */
+		left: 13px;
+		top: 6px;
 		bottom: 6px;
-		width: 1px;
-		background: rgba(7, 154, 174, 0.2);
+		width: 2px;
+		border-left: 2px dotted rgba(7, 154, 174, 0.4);
 	}
 
 	.step {
