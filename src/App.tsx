@@ -89,30 +89,30 @@ function App() {
 									<span className='step-number'>02</span>
 									<div>
 										<h4 className='step-title'>Nastavení spolupráce</h4>
-									<AnimatedParagraph className='step-text'>
-										Společně nastavíme rozsah služeb, frekvenci svozu, sezónní
-										kapacitu. Vše jasně, bez složitých smluv.
-									</AnimatedParagraph>
+										<AnimatedParagraph className='step-text'>
+											Společně nastavíme rozsah služeb, frekvenci svozu, sezónní
+											kapacitu. Vše jasně, bez složitých smluv.
+										</AnimatedParagraph>
 									</div>
 								</div>
 								<div className='step'>
 									<span className='step-number'>03</span>
 									<div>
 										<h4 className='step-title'>Pravidelný svoz a praní</h4>
-									<AnimatedParagraph className='step-text'>
-										Prádlo profesionálně vypereme a připravíme k použití v
-										souladu s hygienickými standardy.
-									</AnimatedParagraph>
+										<AnimatedParagraph className='step-text'>
+											Prádlo profesionálně vypereme a připravíme k použití v
+											souladu s hygienickými standardy.
+										</AnimatedParagraph>
 									</div>
 								</div>
 								<div className='step'>
 									<span className='step-number'>04</span>
 									<div>
 										<h4 className='step-title'>Včasné dodání zpět</h4>
-									<AnimatedParagraph className='step-text'>
-										Čisté prádlo dorazí zpět přesně podle domluvy. Vy se
-										mezitím můžete věnovat hostům.
-									</AnimatedParagraph>
+										<AnimatedParagraph className='step-text'>
+											Čisté prádlo dorazí zpět přesně podle domluvy. Vy se
+											mezitím můžete věnovat hostům.
+										</AnimatedParagraph>
 									</div>
 								</div>
 							</div>

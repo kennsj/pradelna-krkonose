@@ -20,7 +20,7 @@ const Clients = () => {
 				centered={true}
 				dataWidth='narrow'
 			/>
-			<div className={styles.grid} ref={gridRef}>
+			<div className={styles.grid} ref={gridRef as React.RefObject<HTMLDivElement>}>
 				<ClientCard
 					img='./img/1.png'
 					paragraph='Hotely a wellness'
