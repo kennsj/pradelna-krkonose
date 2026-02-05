@@ -25,6 +25,7 @@ function App() {
 					}
 					subtitle='Profesionální prádelenský servis pro hotely, penziony a gastro provozy v Krkonoších. Prádlo čistíme v souladu s hygienickými standardy provozního praní.'
 					link='Poptávka'
+					url='/about'
 				/>
 				<Feature
 					features={[

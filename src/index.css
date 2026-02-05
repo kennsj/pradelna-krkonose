@@ -149,7 +149,7 @@ a {
 
 	&::before {
 		position: absolute;
-		bottom: -5px;
+		bottom: -7px;
 		left: 0;
 		content: "";
 		display: block;

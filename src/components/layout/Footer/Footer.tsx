@@ -38,18 +38,24 @@ const Footer = () => {
 							<span>Kpt. Jaroše 496, 543 01 Vrchlabí 1</span>
 						</a>
 					</div>
-				</div>
-				<div className={styles["social-media"]}>
-					<h4>Sledujte nás</h4>
-					<div>
-						<img src='./icons/fb.svg' alt='Facebook icon' />
-						<img src='./icons/linkedin.svg' alt='LinkedIn icon' />
+					<div className={styles["social-info"]}>
+						<h4>Sledujte nás</h4>
+						<div>
+							<a href='' data-link-hidden='true'>
+								<img src='./icons/fb.svg' alt='Facebook icon' />
+							</a>
+							<a href='' data-link-hidden='true'>
+								<img src='./icons/linkedin.svg' alt='LinkedIn icon' />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div className={styles["footer-bottom"]}>
 				<span>© {new Date().getFullYear()} Prádelna Krkonoše</span>
-				<span>Ochrana osobních údajů</span>
+				<span>
+					<a href=''>Ochrana osobních údajů</a>
+				</span>
 				<span>
 					<a href='#'>Cookies</a>
 				</span>

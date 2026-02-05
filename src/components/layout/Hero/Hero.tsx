@@ -10,10 +10,11 @@ type HeroProps = {
 	img: string
 	title: ReactNode
 	subtitle: string
-	link: string
+	link?: string
+	url?: string
 }
 
-const Hero = ({ img, title, subtitle, link }: HeroProps) => {
+const Hero = ({ img, title, subtitle, link, url }: HeroProps) => {
 	const titleRef = useRef<HTMLHeadingElement>(null)
 	const subtitleRef = useRef<HTMLParagraphElement>(null)
 	const buttonRef = useRef<HTMLAnchorElement>(null)
@@ -110,9 +111,12 @@ const Hero = ({ img, title, subtitle, link }: HeroProps) => {
 				<p className={styles.subtitle} ref={subtitleRef}>
 					{subtitle}
 				</p>
-				<a href={`/${link}`} ref={buttonRef}>
-					<AnimatedButton>{link}</AnimatedButton>
-				</a>
+
+				{link && url && (
+					<a href={url} ref={buttonRef}>
+						<AnimatedButton>{link}</AnimatedButton>
+					</a>
+				)}
 			</div>
 		</header>
 	)
