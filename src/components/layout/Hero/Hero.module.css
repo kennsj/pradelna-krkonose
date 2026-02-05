@@ -15,9 +15,18 @@
 			height: auto;
 		}
 
+		@media screen and (max-width: 768px) {
+			height: 70dvh;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
+
+			@media screen and (max-width: 768px) {
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 
 		.img-overlay {
@@ -54,6 +63,14 @@
 
 			p {
 				width: 70%;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 90%;
+
+			p {
+				width: 100%;
 			}
 		}
 	}
