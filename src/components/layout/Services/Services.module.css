@@ -16,10 +16,9 @@
 
 	.card {
 		background: var(--secondary-color);
-		background: var(--primary-color);
 		border-radius: var(--border-radius-big);
 		padding: 5rem 16px 2rem 16px;
-		color: var(--secondary-color);
+		color: var(--primary-color);
 		text-align: center;
 		display: grid;
 		gap: 10px;
@@ -42,10 +41,9 @@
 		}
 
 		p {
-			font-size: 13px;
-			line-height: 1.4;
-			color: #5c5c5c;
-			margin: 0;
+			font-size: 14px;
+			line-height: 24px;
+			color: var(--white-color);
 		}
 	}
 }

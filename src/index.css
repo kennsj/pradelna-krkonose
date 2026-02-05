@@ -83,7 +83,13 @@ section {
 	}
 
 	&[data-background] {
-		background: var(--primary-color);
+		background: var(--secondary-color);
+
+		color: var(--white-color);
+
+		p {
+			color: var(--white-color);
+		}
 	}
 
 	&[data-fullwidth] {
@@ -113,7 +119,7 @@ p {
 h1 {
 	font-family: "General Sans", sans-serif;
 	font-size: clamp(2.5rem, 4vw, 4.5rem);
-	line-height: clamp(2.75rem, 5vw, 5rem);
+	line-height: clamp(2.75rem, 5vw, 5.5rem);
 	font-weight: 500;
 }
 
@@ -278,27 +284,31 @@ a {
 	.steps::before {
 		content: "";
 		position: absolute;
-		left: 13px;
+		left: 17px;
 		top: 6px;
 		bottom: 6px;
 		width: 2px;
-		border-left: 2px dotted rgba(7, 154, 174, 0.4);
+		border-left: 2px dashed var(--primary-color);
 	}
 
 	.step {
 		display: grid;
-		grid-template-columns: 32px 1fr;
-		gap: 1.25rem;
+		grid-template-columns: 35px 1fr;
+		gap: 3.5rem;
 		align-items: start;
 		position: relative;
+
+		h4 {
+			color: var(--black-color);
+		}
 	}
 
 	.step-number {
-		width: 28px;
-		height: 28px;
+		width: 35px;
+		height: 35px;
 		border-radius: 999px;
-		background: var(--secondary-color);
-		color: var(--white-color);
+		background: var(--primary-color);
+		color: var(--secondary-color);
 		font-size: 0.75rem;
 		font-weight: 600;
 		display: inline-flex;

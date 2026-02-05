@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router"
 import { Heading } from "./Heading"
 import { AnimatedParagraph } from "./AnimatedParagraph"
 import { AnimatedButton } from "./AnimatedButton"
@@ -40,14 +41,14 @@ const Intro = ({
 				<AnimatedParagraph animate={animate}>{paragraph}</AnimatedParagraph>
 			)}
 			{button && (
-				<a href=''>
+				<Link to='/'>
 					<AnimatedButton>{button}</AnimatedButton>
-				</a>
+				</Link>
 			)}
 			{link && (
-				<a href='/' className='link'>
+				<Link to='/' className='link'>
 					{link}
-				</a>
+				</Link>
 			)}
 			{children}
 		</div>

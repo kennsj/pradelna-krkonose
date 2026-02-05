@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router"
 import styles from "./Footer.module.css"
 
 const Footer = () => {
@@ -5,7 +6,9 @@ const Footer = () => {
 		<footer className={styles["footer-container"]}>
 			<div className={styles.footer}>
 				<div className={styles["footer-info"]}>
-					<img src='/logo-white.svg' alt='Logo Prádelna' />
+					<Link to='/' data-link-hidden='true'>
+						<img src='/logo-white.svg' alt='Logo Prádelna' />
+					</Link>
 					<p>
 						Spolupracujeme v souladu s hygienickými standardy provozního praní.
 					</p>
@@ -13,10 +16,10 @@ const Footer = () => {
 				<div className={styles["quick-links"]}>
 					<h4>Rychlá navigace</h4>
 
-					<a href='#'>Služby</a>
-					<a href='#'>Typy provozů</a>
-					<a href='#'>Jak to funguje</a>
-					<a href='#'>Kontakt</a>
+					<Link to='/services'>Služby</Link>
+					<Link to='/types'>Typy provozů</Link>
+					<Link to='/how-it-works'>Jak to funguje</Link>
+					<Link to='/contact'>Kontakt</Link>
 				</div>
 				<div className={styles["contact-info"]}>
 					<h4>Kontakt</h4>
@@ -33,18 +36,18 @@ const Footer = () => {
 						</a>
 					</div>
 					<div>
-						<a href='#' data-link-hidden='true'>
+						<Link to='/' data-link-hidden='true'>
 							<img src='./icons/map.svg' alt='Location icon' />
 							<span>Kpt. Jaroše 496, 543 01 Vrchlabí 1</span>
-						</a>
+						</Link>
 					</div>
 					<div className={styles["social-info"]}>
 						<h4>Sledujte nás</h4>
 						<div>
-							<a href='' data-link-hidden='true'>
+							<a href='https://facebook.com' data-link-hidden='true'>
 								<img src='./icons/fb.svg' alt='Facebook icon' />
 							</a>
-							<a href='' data-link-hidden='true'>
+							<a href='https://linkedin.com' data-link-hidden='true'>
 								<img src='./icons/linkedin.svg' alt='LinkedIn icon' />
 							</a>
 						</div>
@@ -54,13 +57,14 @@ const Footer = () => {
 			<div className={styles["footer-bottom"]}>
 				<span>© {new Date().getFullYear()} Prádelna Krkonoše</span>
 				<span>
-					<a href=''>Ochrana osobních údajů</a>
+					<Link to='/privacy'>Ochrana osobních údajů</Link>
 				</span>
 				<span>
-					<a href='#'>Cookies</a>
+					<Link to='/cookies'>Cookies</Link>
 				</span>
 				<span>
-					Tvorba webových stránek: <br /> <a href='#'>Jonáš Rech</a>
+					Tvorba webových stránek: <br />{" "}
+					<a href='https://jonasrech.cz'>Jonáš Rech</a>
 				</span>
 			</div>
 		</footer>

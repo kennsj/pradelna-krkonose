@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "@tanstack/react-router"
 import styles from "./Nav.module.css"
 import { AnimatedButton } from "../../ui/AnimatedButton"
 
@@ -6,16 +7,18 @@ const Nav = () => {
 	const [menuOpen, setMenuOpen] = useState(false)
 
 	return (
-		<nav className={styles.nav}>
-			<a href='/' className={styles.logo} data-link-hidden='true'>
+		<nav className={styles.nav} style={{ position: "relative", zIndex: 10000 }}>
+			<Link to='/' className={styles.logo} data-link-hidden='true'>
 				<img src='./logo.svg' alt='Prádelna logo' />
-			</a>
+			</Link>
 			<div className={styles.links}>
-				<a href='/#'>Služby</a>
-				<a href='/#'>Reference</a>
-				<a href='/#'>Jak to funguje</a>
-				<a href='/#'>Kontakt</a>
-				<AnimatedButton>Poptávka</AnimatedButton>
+				<Link to='/services'>Služby</Link>
+				<Link to='/references'>Reference</Link>
+				<Link to='/how-it-works'>Jak to funguje</Link>
+				<Link to='/contact'>Kontakt</Link>
+				<Link to='/about' data-link-hidden='true'>
+					<AnimatedButton>Poptávka</AnimatedButton>
+				</Link>
 			</div>
 			<button
 				className={`${styles["mobile-menu-btn"]} ${menuOpen ? styles.active : ""}`}
@@ -28,21 +31,25 @@ const Nav = () => {
 			</button>
 			{menuOpen && (
 				<div className={styles["mobile-menu"]}>
-					<a href='/#' onClick={() => setMenuOpen(false)}>
+					<Link to='/services' onClick={() => setMenuOpen(false)}>
 						Služby
-					</a>
-					<a href='/#' onClick={() => setMenuOpen(false)}>
+					</Link>
+					<Link to='/references' onClick={() => setMenuOpen(false)}>
 						Reference
-					</a>
-					<a href='/#' onClick={() => setMenuOpen(false)}>
+					</Link>
+					<Link to='/how-it-works' onClick={() => setMenuOpen(false)}>
 						Jak to funguje
-					</a>
-					<a href='/#' onClick={() => setMenuOpen(false)}>
+					</Link>
+					<Link to='/contact' onClick={() => setMenuOpen(false)}>
 						Kontakt
-					</a>
-					<AnimatedButton onClick={() => setMenuOpen(false)}>
-						Poptávka
-					</AnimatedButton>
+					</Link>
+					<Link
+						to='/about'
+						data-link-hidden='true'
+						onClick={() => setMenuOpen(false)}
+					>
+						<AnimatedButton>Poptávka</AnimatedButton>
+					</Link>
 				</div>
 			)}
 		</nav>

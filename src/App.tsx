@@ -1,4 +1,5 @@
 import "./App.css"
+import { Link } from "@tanstack/react-router"
 import Services from "./components/layout/Services/Services"
 import Feature from "./components/layout/Feature/Feature"
 import Hero from "./components/layout/Hero/Hero"
@@ -43,7 +44,7 @@ function App() {
 					<Services />
 				</section>
 
-				<section data-background data-fullwidth>
+				<section>
 					<Container
 						overline='NÁS'
 						title='Lokální prádelna, na kterou se můžete spolehnout'
@@ -65,9 +66,9 @@ function App() {
 								potřeb konkrétního provozu.
 							</p>
 						</AnimatedTextGroup>
-						<a href='#' data-link-hidden='true'>
+						<Link to='/about' data-link-hidden='true'>
 							<AnimatedButton data-dark-bg={true}>Poptávka</AnimatedButton>
-						</a>
+						</Link>
 					</Container>
 				</section>
 				<section>

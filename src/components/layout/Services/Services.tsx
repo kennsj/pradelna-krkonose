@@ -65,7 +65,7 @@ const ServiceCard = ({ img, title, description }: ClientCardProps) => {
 			<Heading as='h4' setAnimation={false}>
 				{title}
 			</Heading>
-			{description}
+			<p>{description}</p>
 		</div>
 	)
 }

@@ -1,9 +1,10 @@
+import { Link } from "@tanstack/react-router"
 import { Heading } from "../Heading"
 import { ImageReveal } from "../ImageReveal"
 import styles from "./Container.module.css"
 
 type ContainerProps = {
-	overline: string
+	overline?: string
 	title: string
 	children: React.ReactNode
 	imageUrl?: string
@@ -41,7 +42,7 @@ const Container = ({
 					{title}
 				</Heading>
 				{children}
-				{buttonText && buttonLink && <a href={buttonLink}>{buttonText}</a>}
+				{buttonText && buttonLink && <Link to={buttonLink}>{buttonText}</Link>}
 			</div>
 		</div>
 	)

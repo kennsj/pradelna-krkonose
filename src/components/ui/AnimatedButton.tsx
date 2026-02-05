@@ -72,7 +72,7 @@ export function AnimatedButton({
 				{
 					yPercent: -100,
 					opacity: 0,
-					duration: 0.4,
+					duration: 0.3,
 					stagger: 0.015,
 					ease: "power3.in",
 				},
@@ -85,7 +85,7 @@ export function AnimatedButton({
 				{
 					yPercent: 0,
 					opacity: 1,
-					duration: 0.4,
+					duration: 0.2,
 					stagger: 0.015,
 					ease: "power3.out",
 				},

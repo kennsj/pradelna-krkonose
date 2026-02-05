@@ -6,10 +6,12 @@
 
 		.contact-info {
 			a {
+				width: fit-content;
 				display: flex;
 				align-items: center;
 				gap: 1.5rem;
 				margin-bottom: 1rem;
+				transition: 0.3s ease;
 
 				img {
 					width: 22px;
