@@ -1,6 +1,7 @@
 .footer-container {
 	background: var(--secondary-color);
 	color: var(--white-black);
+	color: var(--white-color);
 
 	p {
 		color: var(--white-color);
@@ -64,6 +65,7 @@
 				display: flex;
 				align-items: center;
 				margin-top: 0.5rem;
+				transition: transform 0.3s ease;
 			}
 			img {
 				width: 18px;

@@ -9,6 +9,7 @@ import { Heading } from "./components/ui/Heading"
 import { AnimatedButton } from "./components/ui/AnimatedButton"
 import { AnimatedTextGroup } from "./components/ui/AnimatedTextGroup"
 import Contact from "./components/layout/Contact/Contact"
+import { ImageReveal } from "./components/ui/ImageReveal"
 
 function App() {
 	return (
@@ -63,8 +64,8 @@ function App() {
 								potřeb konkrétního provozu.
 							</p>
 						</AnimatedTextGroup>
-						<a href=''>
-							<AnimatedButton>Poptávka</AnimatedButton>
+						<a href='#' data-link-hidden='true'>
+							<AnimatedButton data-dark-bg={true}>Poptávka</AnimatedButton>
 						</a>
 					</Container>
 				</section>
@@ -124,7 +125,7 @@ function App() {
 							</AnimatedTextGroup>
 						</div>
 						<div className='img-container'>
-							<img src='/img/dryer.png' alt='How it works image' />
+							<ImageReveal src='/img/dryer.png' alt='How it works image' />
 						</div>
 					</div>
 				</section>

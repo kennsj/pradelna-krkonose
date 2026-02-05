@@ -1,3 +1,5 @@
+import { Heading } from "../Heading"
+import { ImageReveal } from "../ImageReveal"
 import styles from "./Container.module.css"
 
 type ContainerProps = {
@@ -28,12 +30,16 @@ const Container = ({
 			className={`${styles.container} ${contentOnRight ? styles["image-right"] : ""}`}
 		>
 			<div className={styles["media-container"]}>
-				{imageUrl && <img src={imageUrl} alt={imageAlt} />}
+				{imageUrl && <ImageReveal src={imageUrl} alt={imageAlt || ""} />}
 				{form && <form>{form}</form>}
 			</div>
 			<div className={styles["info-container"]}>
-				<h5>{overline}</h5>
-				<h2>{title}</h2>
+				<Heading as='h5' className={styles["info-overline"]}>
+					{overline}
+				</Heading>
+				<Heading as='h2' className={styles["info-title"]}>
+					{title}
+				</Heading>
 				{children}
 				{buttonText && buttonLink && <a href={buttonLink}>{buttonText}</a>}
 			</div>

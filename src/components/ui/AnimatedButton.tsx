@@ -10,6 +10,7 @@ type AnimatedButtonProps = {
 	className?: string
 	type?: "button" | "submit" | "reset"
 	disabled?: boolean
+	"data-dark-bg"?: boolean
 }
 
 export function AnimatedButton({
@@ -18,6 +19,7 @@ export function AnimatedButton({
 	className,
 	type = "button",
 	disabled = false,
+	"data-dark-bg": dataDarkBg,
 }: AnimatedButtonProps) {
 	const buttonRef = useRef<HTMLButtonElement>(null)
 	const originalTextRef = useRef<HTMLSpanElement>(null)
@@ -34,6 +36,8 @@ export function AnimatedButton({
 			prefersReducedMotion()
 		)
 			return
+
+		const button = buttonRef.current
 
 		gsap.registerPlugin(SplitText)
 
@@ -61,17 +65,6 @@ export function AnimatedButton({
 
 			const tl = gsap.timeline()
 			timelineRef.current = tl
-
-			// Animate background slide in from left
-			tl.to(
-				backgroundRef.current,
-				{
-					scaleX: 1,
-					duration: 0.6,
-					ease: "power3.inOut",
-				},
-				0,
-			)
 
 			// Animate original text out (up)
 			tl.to(
@@ -145,12 +138,12 @@ export function AnimatedButton({
 			)
 		}
 
-		buttonRef.current.addEventListener("mouseenter", handleMouseEnter)
-		buttonRef.current.addEventListener("mouseleave", handleMouseLeave)
+		button.addEventListener("mouseenter", handleMouseEnter)
+		button.addEventListener("mouseleave", handleMouseLeave)
 
 		return () => {
-			buttonRef.current?.removeEventListener("mouseenter", handleMouseEnter)
-			buttonRef.current?.removeEventListener("mouseleave", handleMouseLeave)
+			button.removeEventListener("mouseenter", handleMouseEnter)
+			button.removeEventListener("mouseleave", handleMouseLeave)
 		}
 	}, [children])
 
@@ -161,6 +154,7 @@ export function AnimatedButton({
 			className={`${styles.animatedButton} ${className || ""}`}
 			type={type}
 			disabled={disabled}
+			data-dark-bg={dataDarkBg}
 		>
 			<span ref={backgroundRef} className={styles.background}></span>
 			<span ref={originalTextRef} className={styles.text}>

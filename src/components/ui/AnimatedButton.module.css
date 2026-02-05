@@ -9,10 +9,12 @@ button {
 	font-family: "Inter", sans-serif;
 	font-size: 1rem;
 	text-transform: uppercase;
-}
-button:hover {
-	border-color: #646cff;
-	cursor: pointer;
+	width: fit-content;
+
+	&[data-dark-bg="true"] {
+		background: var(--secondary-color);
+		color: var(--primary-color);
+	}
 }
 button:focus,
 button:focus-visible {
@@ -53,4 +55,15 @@ button:focus-visible {
 	z-index: 1;
 	width: 100%;
 	text-align: center;
+}
+
+button[data-no-background="true"] {
+	pointer-events: none;
+	cursor: default;
+}
+
+button[data-no-background="true"]:hover {
+	background: inherit;
+	color: inherit;
+	transform: none;
 }

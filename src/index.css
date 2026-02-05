@@ -12,6 +12,7 @@
 	/* background: #11243b; */
 
 	--primary-color: #fcb627;
+	--primary-color: #eed5a4;
 	--secondary-color: #079aae;
 	--tertiary-color: #dbeafe;
 
@@ -171,6 +172,10 @@ a {
 		width: auto;
 		&::before {
 			display: none;
+		}
+
+		&:hover::before {
+			transform: none;
 		}
 	}
 }
