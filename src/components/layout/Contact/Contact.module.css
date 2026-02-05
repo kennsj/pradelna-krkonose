@@ -121,6 +121,13 @@
 					padding: 0.75rem 1.5rem;
 					border: 1px solid var(--primary-color);
 					border-radius: var(--border-radius);
+					transition: 0.3s ease;
+
+					&:hover {
+						background: var(--secondary-color);
+						color: var(--black-color);
+						transition: 0.3s ease;
+					}
 				}
 
 				p {

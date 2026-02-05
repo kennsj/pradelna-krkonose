@@ -1,12 +1,13 @@
 import { useState } from "react"
 import styles from "./Nav.module.css"
+import { AnimatedButton } from "../../ui/AnimatedButton"
 
 const Nav = () => {
 	const [menuOpen, setMenuOpen] = useState(false)
 
 	return (
 		<nav className={styles.nav}>
-			<a href='/' className={styles.logo}>
+			<a href='/' className={styles.logo} data-link-hidden='true'>
 				<img src='./logo.svg' alt='Prádelna logo' />
 			</a>
 			<div className={styles.links}>
@@ -14,7 +15,7 @@ const Nav = () => {
 				<a href='/#'>Reference</a>
 				<a href='/#'>Jak to funguje</a>
 				<a href='/#'>Kontakt</a>
-				<button>Nezavazna poptavka</button>
+				<AnimatedButton>Poptávka</AnimatedButton>
 			</div>
 			<button
 				className={`${styles["mobile-menu-btn"]} ${menuOpen ? styles.active : ""}`}
@@ -39,7 +40,9 @@ const Nav = () => {
 					<a href='/#' onClick={() => setMenuOpen(false)}>
 						Kontakt
 					</a>
-					<button onClick={() => setMenuOpen(false)}>Nezavazna poptavka</button>
+					<AnimatedButton onClick={() => setMenuOpen(false)}>
+						Poptávka
+					</AnimatedButton>
 				</div>
 			)}
 		</nav>

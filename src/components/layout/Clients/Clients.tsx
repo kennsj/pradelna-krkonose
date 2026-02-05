@@ -20,7 +20,10 @@ const Clients = () => {
 				centered={true}
 				dataWidth='narrow'
 			/>
-			<div className={styles.grid} ref={gridRef as React.RefObject<HTMLDivElement>}>
+			<div
+				className={styles.grid}
+				ref={gridRef as React.RefObject<HTMLDivElement>}
+			>
 				<ClientCard
 					img='./img/1.png'
 					paragraph='Hotely a wellness'
@@ -61,7 +64,7 @@ type ClientCardProps = {
 
 const ClientCard = ({ img, paragraph, link, url }: ClientCardProps) => {
 	return (
-		<a href={url}>
+		<a href={url} data-link-hidden='true'>
 			<div className={styles.card}>
 				<img src={img} alt='Client Logo' />
 				<div className={styles["img-overlay"]}></div>

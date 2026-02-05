@@ -1,5 +1,6 @@
 import Intro from "../../ui/Intro"
 import styles from "./Contact.module.css"
+import { AnimatedButton } from "../../ui/AnimatedButton"
 
 const Contact = () => {
 	return (
@@ -10,6 +11,7 @@ const Contact = () => {
 					title='Máte zájem o spolupráci?'
 					paragraph='Ozvěte se nám a domluvíme detaily podle potřeb vašeho provozu.'
 					align='left'
+					animate={false}
 				/>
 				<p>
 					Spolupráci nastavujeme individuálně a v souladu s hygienickými
@@ -17,19 +19,19 @@ const Contact = () => {
 				</p>
 				<div className={styles["contact-info"]}>
 					<div>
-						<a href='tel:+420727839795'>
+						<a href='tel:+420727839795' data-link-hidden='true'>
 							<img src='./icons/phone.svg' alt='Phone icon' />
 							<span>+420 727 839 795</span>
 						</a>
 					</div>
 					<div>
-						<a href='mailto:info@pradelnakrkonose.cz'>
+						<a href='mailto:info@pradelnakrkonose.cz' data-link-hidden='true'>
 							<img src='./icons/mail.svg' alt='Phone icon' />
 							<span>info@pradelnakrkonose.cz</span>
 						</a>
 					</div>
 					<div>
-						<a href='#'>
+						<a href='#' data-link-hidden='true'>
 							<img src='./icons/map.svg' alt='Location icon' />
 							<span>Kpt. Jaroše 496, 543 01 Vrchlabí 1</span>
 						</a>
@@ -89,8 +91,10 @@ const Contact = () => {
 					</div>
 					<div className={styles["form-footer"]}>
 						<div>
-							<button type='submit'>Odeslat poptávku</button>
-							<a href='tel:+420727839795'>Raději voláte?</a>
+							<AnimatedButton type='submit'>Odeslat poptávku</AnimatedButton>
+							<a href='tel:+420727839795' data-link-hidden='true'>
+								Raději voláte?
+							</a>
 						</div>
 						<p>Ozveme se do 24 hodin. Bez zbytečných...</p>
 					</div>

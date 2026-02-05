@@ -138,31 +138,41 @@ h5 {
 }
 
 a {
+	width: fit-content;
+	position: relative;
 	text-decoration: none;
 	color: inherit;
-	transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-}
 
-button {
-	background: var(--primary-color);
-	color: var(--black-color);
-	border-radius: var(--border-radius);
-	border: 0;
-	padding: 16px 32px;
-	width: fit-content;
-
-	&[data-theme="light"] {
-		background: var(--secondary-color);
-		color: var(--white-color);
+	&::before {
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: var(--primary-color);
+		transform: scaleX(0.5);
+		transform-origin: left;
+		transition: transform 0.3s ease;
 	}
-}
-button:hover {
-	border-color: #646cff;
-	cursor: pointer;
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+
+	&:hover {
+		color: var(--primary-color);
+		transition: transform 0.3s ease;
+	}
+
+	&:hover::before {
+		transform: scaleX(1);
+	}
+
+	&:has(button),
+	&[data-link-hidden="true"] {
+		width: auto;
+		&::before {
+			display: none;
+		}
+	}
 }
 
 .intro {

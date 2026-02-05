@@ -1,6 +1,7 @@
 import { useRef, useLayoutEffect } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { prefersReducedMotion } from "../utils/prefersReducedMotion"
 
 type ScrollRevealOptions = {
 	yPercent?: number
@@ -26,7 +27,7 @@ export function useScrollReveal(options: ScrollRevealOptions = {}) {
 	const containerRef = useRef<HTMLElement>(null)
 
 	useLayoutEffect(() => {
-		if (!containerRef.current) return
+		if (!containerRef.current || prefersReducedMotion()) return
 
 		gsap.registerPlugin(ScrollTrigger)
 

@@ -3,6 +3,8 @@ import styles from "./Hero.module.css"
 import gsap from "gsap"
 import { SplitText } from "gsap/SplitText"
 import { useRef, useLayoutEffect } from "react"
+import { prefersReducedMotion } from "../../../utils/prefersReducedMotion"
+import { AnimatedButton } from "../../ui/AnimatedButton"
 
 type HeroProps = {
 	img: string
@@ -14,11 +16,11 @@ type HeroProps = {
 const Hero = ({ img, title, subtitle, link }: HeroProps) => {
 	const titleRef = useRef<HTMLHeadingElement>(null)
 	const subtitleRef = useRef<HTMLParagraphElement>(null)
-	const buttonRef = useRef<HTMLButtonElement>(null)
+	const buttonRef = useRef<HTMLAnchorElement>(null)
 	const imgContainerRef = useRef<HTMLDivElement>(null)
 
 	useLayoutEffect(() => {
-		if (!titleRef.current) return
+		if (!titleRef.current || prefersReducedMotion()) return
 		gsap.registerPlugin(SplitText)
 
 		const ctx = gsap.context(() => {
@@ -108,8 +110,8 @@ const Hero = ({ img, title, subtitle, link }: HeroProps) => {
 				<p className={styles.subtitle} ref={subtitleRef}>
 					{subtitle}
 				</p>
-				<a href={`/${link}`}>
-					<button ref={buttonRef}>{link}</button>
+				<a href={`/${link}`} ref={buttonRef}>
+					<AnimatedButton>{link}</AnimatedButton>
 				</a>
 			</div>
 		</header>

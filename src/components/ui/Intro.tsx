@@ -1,5 +1,6 @@
 import { Heading } from "./Heading"
 import { AnimatedParagraph } from "./AnimatedParagraph"
+import { AnimatedButton } from "./AnimatedButton"
 
 type IntroProps = {
 	overline?: string
@@ -11,6 +12,7 @@ type IntroProps = {
 	align?: "left" | "center" | "right"
 	centered?: boolean
 	dataWidth?: "narrow"
+	animate?: boolean
 }
 
 const Intro = ({
@@ -23,6 +25,7 @@ const Intro = ({
 	align = "center",
 	centered = false,
 	dataWidth,
+	animate = true,
 }: IntroProps) => {
 	return (
 		<div
@@ -33,10 +36,12 @@ const Intro = ({
 		>
 			<Heading as='h5'>{overline}</Heading>
 			<Heading as='h2'>{title}</Heading>
-			{paragraph && <AnimatedParagraph>{paragraph}</AnimatedParagraph>}
+			{paragraph && (
+				<AnimatedParagraph animate={animate}>{paragraph}</AnimatedParagraph>
+			)}
 			{button && (
 				<a href=''>
-					<button>{button}</button>
+					<AnimatedButton>{button}</AnimatedButton>
 				</a>
 			)}
 			{link && (

@@ -21,19 +21,19 @@ const Footer = () => {
 				<div className={styles["contact-info"]}>
 					<h4>Kontakt</h4>
 					<div>
-						<a href='tel:+420727839795'>
+						<a href='tel:+420727839795' data-link-hidden='true'>
 							<img src='./icons/phone.svg' alt='Phone icon' />
 							<span>+420 727 839 795</span>
 						</a>
 					</div>
 					<div>
-						<a href='mailto:info@pradelnakrkonose.cz'>
+						<a href='mailto:info@pradelnakrkonose.cz' data-link-hidden='true'>
 							<img src='./icons/mail.svg' alt='Phone icon' />
 							<span>info@pradelnakrkonose.cz</span>
 						</a>
 					</div>
 					<div>
-						<a href='#'>
+						<a href='#' data-link-hidden='true'>
 							<img src='./icons/map.svg' alt='Location icon' />
 							<span>Kpt. Jaroše 496, 543 01 Vrchlabí 1</span>
 						</a>
