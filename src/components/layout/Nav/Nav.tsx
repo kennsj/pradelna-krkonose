@@ -31,16 +31,32 @@ const Nav = () => {
 			</button>
 			{menuOpen && (
 				<div className={styles["mobile-menu"]}>
-					<Link to='/services' onClick={() => setMenuOpen(false)}>
+					<Link
+						to='/services'
+						onClick={() => setMenuOpen(false)}
+						data-link-hidden='true'
+					>
 						Služby
 					</Link>
-					<Link to='/references' onClick={() => setMenuOpen(false)}>
+					<Link
+						to='/references'
+						onClick={() => setMenuOpen(false)}
+						data-link-hidden='true'
+					>
 						Reference
 					</Link>
-					<Link to='/how-it-works' onClick={() => setMenuOpen(false)}>
+					<Link
+						to='/how-it-works'
+						onClick={() => setMenuOpen(false)}
+						data-link-hidden='true'
+					>
 						Jak to funguje
 					</Link>
-					<Link to='/contact' onClick={() => setMenuOpen(false)}>
+					<Link
+						to='/contact'
+						onClick={() => setMenuOpen(false)}
+						data-link-hidden='true'
+					>
 						Kontakt
 					</Link>
 					<Link

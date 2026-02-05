@@ -134,11 +134,12 @@
 			}
 
 			button {
+				width: fit-content;
 				background: var(--primary-color);
 				color: var(--black-color);
-				padding: 0.75rem 1.5rem;
-				border-radius: var(--border-radius);
-				margin-top: 0.5rem;
+				padding: 0.75rem 3rem;
+				border-radius: 50rem;
+				/* margin-top: 0.5rem; */
 
 				&:hover {
 					color: var(--black-color);
