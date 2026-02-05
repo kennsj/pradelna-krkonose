@@ -6,13 +6,14 @@ import Clients from "./components/layout/Clients/Clients"
 import Container from "./components/ui/Container/Container"
 import Intro from "./components/ui/Intro"
 import { Heading } from "./components/ui/Heading"
+import Contact from "./components/layout/Contact/Contact"
 
 function App() {
 	return (
 		<>
 			<header>
 				<Hero
-					img='./cdb49f4f897889c109d06ae709eea2f5f2468a6f.png'
+					img='./img/cdb49f4f897889c109d06ae709eea2f5f2468a6f.webp'
 					title={
 						<>
 							Čisté prádlo <span className='highlight'>včas</span>. <br />I v{" "}
@@ -37,7 +38,8 @@ function App() {
 				<section>
 					<Services />
 				</section>
-				<section>
+
+				<section data-background data-fullwidth>
 					<Container
 						overline='NÁS'
 						title='Lokální prádelna, na kterou se můžete spolehnout'
@@ -130,105 +132,7 @@ function App() {
 					</div>
 				</section>
 				<section>
-					<div className='contact-info-container'>
-						<div className='contact'>
-							<Intro
-								overline='KONTAKT'
-								title='Máte zájem o spolupráci?'
-								paragraph='Ozvěte se nám a domluvíme detaily podle potřeb vašeho provozu.'
-								align='left'
-							/>
-							<p>
-								Spolupráci nastavujeme individuálně a v souladu s hygienickými
-								standardy provozního praní.
-							</p>
-							<div className='contact-info'>
-								<div>
-									<a href='tel:+420727839795'>
-										<img src='./icons/phone.svg' alt='Phone icon' />
-										<span>+420 727 839 795</span>
-									</a>
-								</div>
-								<div>
-									<a href='mailto:info@pradelnakrkonose.cz'>
-										<img src='./icons/mail.svg' alt='Phone icon' />
-										<span>info@pradelnakrkonose.cz</span>
-									</a>
-								</div>
-								<div>
-									<a href='#'>
-										<img src='./icons/map.svg' alt='Location icon' />
-										<span>Kpt. Jaroše 496, 543 01 Vrchlabí 1</span>
-									</a>
-								</div>
-								<iframe
-									width={400}
-									height={300}
-									style={{ borderRadius: "18px", border: "0" }}
-									src='https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Kpt.%20Jaro%C5%A1e%20496%2C%20543%2001%20Vrchlab%C3%AD%201%2C%20Czechia&maptype=roadmap'
-									allowFullScreen
-								></iframe>
-							</div>
-						</div>
-						<div className='contact-form'>
-							<form>
-								<div className='form-group'>
-									<label>Typ provozu</label>
-									<select required>
-										<option value=''>Vyberte</option>
-										<option value='hotel'>Hotel</option>
-										<option value='pension'>Pension</option>
-										<option value='restaurace'>Restaurace</option>
-										<option value='chata'>Chata</option>
-										<option value='jine'>Jiné</option>
-									</select>
-								</div>
-								<div className='form-group'>
-									<label>Jméno a příjmení</label>
-									<input
-										id='name'
-										type='text'
-										placeholder='Jan Novák'
-										required
-									/>
-								</div>
-								<div className='form-row'>
-									<div className='form-group'>
-										<label>Telefon</label>
-										<input
-											id='phone'
-											type='tel'
-											placeholder='+420 77x xxx xxx'
-											required
-										/>
-									</div>
-									<div className='form-group'>
-										<label>Email</label>
-										<input
-											id='email'
-											type='email'
-											placeholder='novak@email.com'
-											required
-										/>
-									</div>
-								</div>
-								<div className='form-group'>
-									<label>Poznámka</label>
-									<textarea
-										placeholder='Objčem, velikost zařízení...'
-										required
-									></textarea>
-								</div>
-								<div className='form-footer'>
-									<div>
-										<button type='submit'>Odeslat poptávku</button>
-										<a href='tel:+420727839795'>Raději voláte?</a>
-									</div>
-									<p>Ozveme se do 24 hodin. Bez zbytečných...</p>
-								</div>
-							</form>
-						</div>
-					</div>
+					<Contact />
 				</section>
 			</main>
 		</>

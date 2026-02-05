@@ -15,22 +15,22 @@ const Services = () => {
 			/>
 			<div className={styles.cards}>
 				<ServiceCard
-					img='./public/icons/truck.svg'
+					img='./icons/truck.svg'
 					title='Svoz a rozvoz'
 					description='Prádlo vyzvedneme a doručíme zpět podle domluveného harmonogramu. Logistiku řešíme spolehlivě, bez zbytečných prostojů.'
 				/>
 				<ServiceCard
-					img='./public/icons/hanger.svg'
+					img='./icons/hanger.svg'
 					title='Skládání a třídění'
 					description='Prádlo vracíme přehledně složené a připravené k okamžitému použití. Šetříme čas personálu a usnadňujeme provoz.'
 				/>
 				<ServiceCard
-					img='./public/icons/washer.svg'
+					img='./icons/washer.svg'
 					title='Praní a mandlování'
 					description='Pravidelné praní, sušení a mandlování ložního prádla, ručníků a provozního textilu. Stálá kvalita i při vyšším objemu zakázek.'
 				/>
 				<ServiceCard
-					img='./public/icons/clock.svg'
+					img='./icons/clock.svg'
 					title='Flexibilita v sezóně'
 					description='Navýšení kapacity v hlavní sezóně bez stresu. Jsme připraveni na plnou obsazenost i nečekané situace.'
 				/>
