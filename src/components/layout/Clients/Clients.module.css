@@ -35,7 +35,7 @@
 			transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
 		}
 
-		&:hover > .card-info > a {
+		&:hover > .card-info > span {
 			color: var(--primary-color);
 			transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
 		}
@@ -80,7 +80,7 @@
 				color: var(--secondary-color);
 			}
 
-			a {
+			span {
 				padding-top: 2rem;
 				transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
 

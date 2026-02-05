@@ -1,4 +1,5 @@
 import { Heading } from "./Heading"
+import { AnimatedParagraph } from "./AnimatedParagraph"
 
 type IntroProps = {
 	overline?: string
@@ -32,7 +33,7 @@ const Intro = ({
 		>
 			<Heading as='h5'>{overline}</Heading>
 			<Heading as='h2'>{title}</Heading>
-			<p>{paragraph}</p>
+			{paragraph && <AnimatedParagraph>{paragraph}</AnimatedParagraph>}
 			{button && (
 				<a href=''>
 					<button>{button}</button>

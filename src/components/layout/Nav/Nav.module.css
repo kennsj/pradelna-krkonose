@@ -7,7 +7,6 @@
 	margin: 0 auto;
 	padding: 2rem 3rem;
 	position: relative;
-	/* background: var(--white-color); */
 	z-index: 100;
 
 	@media screen and (max-width: 1260px) {

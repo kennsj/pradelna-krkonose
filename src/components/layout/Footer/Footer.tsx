@@ -54,7 +54,7 @@ const Footer = () => {
 					<a href='#'>Cookies</a>
 				</span>
 				<span>
-					Tvorba webových stránek: <a href='#'>Jonáš Rech</a>
+					Tvorba webových stránek: <br /> <a href='#'>Jonáš Rech</a>
 				</span>
 			</div>
 		</footer>

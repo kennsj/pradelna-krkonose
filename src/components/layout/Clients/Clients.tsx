@@ -1,7 +1,16 @@
 import Intro from "../../ui/Intro"
 import styles from "./Clients.module.css"
+import { useScrollReveal } from "../../../hooks/useScrollReveal"
+import { AnimatedParagraph } from "../../ui/AnimatedParagraph"
 
 const Clients = () => {
+	const gridRef = useScrollReveal({
+		selector: `.${styles.card}`,
+		yPercent: 10,
+		opacity: 0.8,
+		stagger: 0.1,
+	})
+
 	return (
 		<div>
 			<Intro
@@ -11,7 +20,7 @@ const Clients = () => {
 				centered={true}
 				dataWidth='narrow'
 			/>
-			<div className={styles.grid}>
+			<div className={styles.grid} ref={gridRef}>
 				<ClientCard
 					img='./img/1.png'
 					paragraph='Hotely a wellness'
@@ -52,13 +61,13 @@ type ClientCardProps = {
 
 const ClientCard = ({ img, paragraph, link, url }: ClientCardProps) => {
 	return (
-		<a href='#'>
+		<a href={url}>
 			<div className={styles.card}>
 				<img src={img} alt='Client Logo' />
 				<div className={styles["img-overlay"]}></div>
 				<div className={styles["card-info"]}>
-					<p>{paragraph}</p>
-					<a href={url}>{link}</a>
+					<AnimatedParagraph>{paragraph}</AnimatedParagraph>
+					<span>{link}</span>
 				</div>
 			</div>
 		</a>

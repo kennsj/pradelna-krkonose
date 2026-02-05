@@ -1,8 +1,17 @@
 import { Heading } from "../../ui/Heading"
 import Intro from "../../ui/Intro"
 import styles from "./Services.module.css"
+import { useScrollReveal } from "../../../hooks/useScrollReveal"
+import { AnimatedParagraph } from "../../ui/AnimatedParagraph"
 
 const Services = () => {
+	const cardsRef = useScrollReveal({
+		selector: `.${styles.card}`,
+		yPercent: 10,
+		opacity: 0,
+		stagger: 0.1,
+	})
+
 	return (
 		<div>
 			<Intro
@@ -13,7 +22,7 @@ const Services = () => {
 				centered={true}
 				dataWidth='narrow'
 			/>
-			<div className={styles.cards}>
+			<div className={styles.cards} ref={cardsRef as any}>
 				<ServiceCard
 					img='./icons/truck.svg'
 					title='Svoz a rozvoz'
@@ -52,7 +61,7 @@ const ServiceCard = ({ img, title, description }: ClientCardProps) => {
 		<div className={styles.card}>
 			<img src={img} alt={title} />
 			<Heading as='h4'>{title}</Heading>
-			<p>{description}</p>
+			<AnimatedParagraph>{description}</AnimatedParagraph>
 		</div>
 	)
 }

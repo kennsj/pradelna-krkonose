@@ -6,6 +6,7 @@ import Clients from "./components/layout/Clients/Clients"
 import Container from "./components/ui/Container/Container"
 import Intro from "./components/ui/Intro"
 import { Heading } from "./components/ui/Heading"
+import { AnimatedParagraph } from "./components/ui/AnimatedParagraph"
 import Contact from "./components/layout/Contact/Contact"
 
 function App() {
@@ -46,21 +47,21 @@ function App() {
 						imageUrl='/img/about-img.png'
 						imageAlt='About image'
 					>
-						<p>
+						<AnimatedParagraph>
 							Jsme profesionální prádelna v Krkonoších, která zajišťuje praní a
 							mandlování prádla pro hotely, penziony, horské chaty, restaurace a
 							další provozy.
-						</p>
-						<p className='bold'>
+						</AnimatedParagraph>
+						<AnimatedParagraph className='bold'>
 							Prádlo zpracováváme v souladu s hygienickými standardy, s důrazem
 							na kvalitu a spolehlivost.
-						</p>
-						<p>
+						</AnimatedParagraph>
+						<AnimatedParagraph>
 							Nabízíme pravidelnou, sezónní i nárazovou spolupráci podle potřeb
 							konkrétního provozu.
-						</p>
+						</AnimatedParagraph>
 						<a href=''>
-							<button>Nezávazná poptávka</button>
+							<button data-theme='light'>Nezávazná poptávka</button>
 						</a>
 					</Container>
 				</section>
@@ -78,40 +79,40 @@ function App() {
 									<span className='step-number'>01</span>
 									<div>
 										<h4 className='step-title'>Nezávazná poptávka</h4>
-										<p className='step-text'>
+										<AnimatedParagraph className='step-text'>
 											Vyplňte krátký formulář nebo nám zavolejte. Ozveme se a
 											domluvíme detaily podle vašeho provozu.
-										</p>
+										</AnimatedParagraph>
 									</div>
 								</div>
 								<div className='step'>
 									<span className='step-number'>02</span>
 									<div>
 										<h4 className='step-title'>Nastavení spolupráce</h4>
-										<p className='step-text'>
-											Společně nastavíme rozsah služeb, frekvenci svozu, sezónní
-											kapacitu. Vše jasně, bez složitých smluv.
-										</p>
+									<AnimatedParagraph className='step-text'>
+										Společně nastavíme rozsah služeb, frekvenci svozu, sezónní
+										kapacitu. Vše jasně, bez složitých smluv.
+									</AnimatedParagraph>
 									</div>
 								</div>
 								<div className='step'>
 									<span className='step-number'>03</span>
 									<div>
 										<h4 className='step-title'>Pravidelný svoz a praní</h4>
-										<p className='step-text'>
-											Prádlo profesionálně vypereme a připravíme k použití v
-											souladu s hygienickými standardy.
-										</p>
+									<AnimatedParagraph className='step-text'>
+										Prádlo profesionálně vypereme a připravíme k použití v
+										souladu s hygienickými standardy.
+									</AnimatedParagraph>
 									</div>
 								</div>
 								<div className='step'>
 									<span className='step-number'>04</span>
 									<div>
 										<h4 className='step-title'>Včasné dodání zpět</h4>
-										<p className='step-text'>
-											Čisté prádlo dorazí zpět přesně podle domluvy. Vy se
-											mezitím můžete věnovat hostům.
-										</p>
+									<AnimatedParagraph className='step-text'>
+										Čisté prádlo dorazí zpět přesně podle domluvy. Vy se
+										mezitím můžete věnovat hostům.
+									</AnimatedParagraph>
 									</div>
 								</div>
 							</div>

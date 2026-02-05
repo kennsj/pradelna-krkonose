@@ -47,8 +47,8 @@ const Hero = ({ img, title, subtitle, link }: HeroProps) => {
 					{
 						delay: 0.2,
 						clipPath: "inset(0% 0% 0% 0%)",
-						duration: 1.2,
-						ease: "power2.out",
+						duration: 0.9,
+						ease: "easeInOut",
 					},
 					0,
 				)

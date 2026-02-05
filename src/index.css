@@ -149,6 +149,12 @@ button {
 	border-radius: var(--border-radius);
 	border: 0;
 	padding: 16px 32px;
+	width: fit-content;
+
+	&[data-theme="light"] {
+		background: var(--secondary-color);
+		color: var(--white-color);
+	}
 }
 button:hover {
 	border-color: #646cff;
