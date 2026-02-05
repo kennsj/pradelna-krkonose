@@ -35,6 +35,10 @@
 	.info-container {
 		display: flex;
 		flex-direction: column;
+
+		a {
+			width: fit-content;
+		}
 	}
 }
 

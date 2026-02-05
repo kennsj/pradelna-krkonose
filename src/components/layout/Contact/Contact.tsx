@@ -92,11 +92,11 @@ const Contact = () => {
 					<div className={styles["form-footer"]}>
 						<div>
 							<AnimatedButton type='submit'>Odeslat poptávku</AnimatedButton>
-							<a href='tel:+420727839795' data-link-hidden='true'>
+							<a href='#' data-link-hidden='true'>
 								Raději voláte?
 							</a>
 						</div>
-						<p>Ozveme se do 24 hodin. Bez zbytečných...</p>
+						<p>Ozveme se do 24 hodin. Bez zbytečných.</p>
 					</div>
 				</form>
 			</div>

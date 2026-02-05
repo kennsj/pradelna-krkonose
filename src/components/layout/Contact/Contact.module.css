@@ -16,6 +16,10 @@
 				}
 			}
 		}
+
+		iframe {
+			margin-top: 2rem;
+		}
 	}
 
 	@media screen and (max-width: 1024px) {
@@ -93,21 +97,14 @@
 			}
 
 			button[type="submit"] {
-				padding: 0.75rem 1.5rem;
 				background: var(--primary-color);
 				color: var(--black-color);
-				border: none;
-				border-radius: var(--border-radius);
-				font-weight: 600;
-				cursor: pointer;
 				transition: background-color 0.3s ease;
-				width: fit-content;
 			}
 
 			.form-footer {
 				display: flex;
 				flex-direction: column;
-				/* align-items: center; */
 				gap: 1rem;
 
 				button {
@@ -118,14 +115,13 @@
 				a {
 					font-size: 16px;
 					font-weight: 400;
-					padding: 0.75rem 1.5rem;
+					padding: 1rem 2rem;
 					border: 1px solid var(--primary-color);
-					border-radius: var(--border-radius);
+					border-radius: 50em;
 					transition: 0.3s ease;
 
 					&:hover {
 						background: var(--secondary-color);
-						color: var(--black-color);
 						transition: 0.3s ease;
 					}
 				}

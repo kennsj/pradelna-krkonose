@@ -1,11 +1,7 @@
 .footer-container {
 	background: var(--secondary-color);
-	color: var(--white-black);
 	color: var(--white-color);
-
-	p {
-		color: var(--white-color);
-	}
+	/* color: var(--primary-color); */
 
 	.footer {
 		max-width: 1260px;
@@ -15,6 +11,10 @@
 		margin: 2rem auto;
 		padding: 4rem 3rem;
 		font-size: 1rem;
+
+		a {
+			transition: 0.3s ease;
+		}
 
 		@media screen and (max-width: 1024px) {
 			grid-template-columns: 1fr 1fr;
@@ -35,7 +35,6 @@
 			font-size: 1.2rem;
 			font-weight: 500;
 			margin-bottom: 1rem;
-			color: var(--white-color);
 		}
 
 		.footer-info {
@@ -49,7 +48,7 @@
 			p {
 				width: 70%;
 				font-size: 1rem;
-				color: var(--black-color);
+				color: var(--white-color);
 			}
 
 			@media screen and (max-width: 768px) {
@@ -83,12 +82,8 @@
 		.social-media {
 			div {
 				display: flex;
-				/* flex-direction: column; */
-				/* align-items: center; */
 				img {
-					/* width: 24px; */
 					margin-right: 0.5rem;
-					filter: brightness(1) invert(1);
 				}
 			}
 		}
