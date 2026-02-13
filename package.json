@@ -10,9 +10,6 @@
 		"lint": "eslint .",
 		"preview": "vite preview"
 	},
-	"engines": {
-		"node": "24.x"
-	},
 	"dependencies": {
 		"@tanstack/react-form": "^1.28.0",
 		"@tanstack/react-router": "^1.158.1",
