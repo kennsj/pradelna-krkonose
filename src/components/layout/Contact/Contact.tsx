@@ -1,6 +1,5 @@
 import Intro from "../../ui/Intro"
 import styles from "./Contact.module.css"
-import { AnimatedButton } from "../../ui/AnimatedButton"
 import ContactForm from "./ContactForm"
 
 const Contact = () => {
