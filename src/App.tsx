@@ -45,7 +45,7 @@ function App() {
 				<Container
 					overline='NÁS'
 					title='Lokální prádelna, na kterou se můžete spolehnout'
-					imageUrl='/img/about-img.png'
+					imageUrl='/img/about-img.webp'
 					imageAlt='About image'
 				>
 					<AnimatedTextGroup>

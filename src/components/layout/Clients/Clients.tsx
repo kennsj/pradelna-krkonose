@@ -25,25 +25,25 @@ const Clients = () => {
 				ref={gridRef as React.RefObject<HTMLDivElement>}
 			>
 				<ClientCard
-					img='./img/1.png'
+					img='./img/1.webp'
 					paragraph='Hotely a wellness'
 					link='Zobrazit detail'
 					url='#'
 				/>
 				<ClientCard
-					img='./img/2.png'
+					img='./img/2.webp'
 					paragraph='Penziony a apartmány'
 					link='Zobrazit detail'
 					url='#'
 				/>
 				<ClientCard
-					img='./img/3.png'
+					img='./img/3.webp'
 					paragraph='Horské chaty a chalupy'
 					link='Zobrazit detail'
 					url='#'
 				/>
 				<ClientCard
-					img='./img/4.png'
+					img='./img/4.webp'
 					paragraph='Restaurace a gastro provozy'
 					link='Zobrazit detail'
 					url='#'

@@ -20,7 +20,7 @@ function About() {
 				<section>
 					<Container
 						title='Hotely a wellness'
-						imageUrl='/img/about-img.png'
+						imageUrl='/img/about-img.webp'
 						imageAlt='About image'
 						contentOnRight={true}
 					>
@@ -57,7 +57,7 @@ function About() {
 				<section data-fullwidth data-background>
 					<Container
 						title='Penziony a apartmány'
-						imageUrl='/img/about-img.png'
+						imageUrl='/img/about-img.webp'
 						imageAlt='About image'
 					>
 						<AnimatedTextGroup>
@@ -88,7 +88,7 @@ function About() {
 				<section>
 					<Container
 						title='Hotely a wellness'
-						imageUrl='/img/about-img.png'
+						imageUrl='/img/about-img.webp'
 						imageAlt='About image'
 						contentOnRight={true}
 					>
