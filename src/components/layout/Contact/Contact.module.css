@@ -114,21 +114,21 @@
 				gap: 1rem;
 
 				button {
-					font-size: 16px;
-					margin-right: 2rem;
-				}
+					position: relative;
+					background: var(--secondary-color);
+					color: var(--primary-color);
+					border-radius: 50rem;
+					margin-top: 2rem;
+					padding: 16px 3rem;
+					font-family: "Inter", sans-serif;
+					font-size: 1rem;
+					text-transform: uppercase;
+					cursor: pointer;
+					overflow: hidden;
 
-				a {
-					font-size: 16px;
-					font-weight: 400;
-					padding: 1rem 2rem;
-					border: 1px solid var(--primary-color);
-					border-radius: 50em;
-					transition: 0.3s ease;
-
-					&:hover {
-						background: var(--secondary-color);
-						transition: 0.3s ease;
+					&:focus,
+					&:focus-visible {
+						outline: 4px solid var(--secondary-color);
 					}
 				}
 

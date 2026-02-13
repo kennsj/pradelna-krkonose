@@ -38,14 +38,20 @@ function About() {
 							</p>
 							<p className='bold'>Typicky řešíme:</p>
 							<ul>
-								<li>Praní a mandlování ložního prádla</li>
-								<li>Praní ručníků, osušek a županů</li>
-								<li>Pravidelný svoz a rozvoz prádla</li>
+								<li>
+									<p>Praní a mandlování ložního prádla</p>
+								</li>
+								<li>
+									<p>Praní ručníků, osušek a županů</p>
+								</li>
+								<li>
+									<p>Pravidelný svoz a rozvoz prádla</p>
+								</li>
 							</ul>
-							<a href='#' data-link-hidden='true'>
-								<AnimatedButton data-dark-bg={true}>Poptávka</AnimatedButton>
-							</a>
 						</AnimatedTextGroup>
+						<AnimatedButton url='#' data-dark-bg={true}>
+							Poptávka
+						</AnimatedButton>
 					</Container>
 				</section>
 				<section data-fullwidth data-background>
@@ -69,8 +75,12 @@ function About() {
 								<li>
 									<p>Praní a mandlování ložního prádla</p>
 								</li>
-								<li>Praní ručníků, osušek a županů</li>
-								<li>Pravidelný svoz a rozvoz prádla</li>
+								<li>
+									<p>Praní ručníků, osušek a županů</p>
+								</li>
+								<li>
+									<p>Pravidelný svoz a rozvoz prádla</p>
+								</li>
 							</ul>
 						</AnimatedTextGroup>
 					</Container>
@@ -96,14 +106,20 @@ function About() {
 							</p>
 							<p className='bold'>Typicky řešíme:</p>
 							<ul>
-								<li>Praní a mandlování ložního prádla</li>
-								<li>Praní ručníků, osušek a županů</li>
-								<li>Pravidelný svoz a rozvoz prádla</li>
+								<li>
+									<p>Praní a mandlování ložního prádla</p>
+								</li>
+								<li>
+									<p>Praní ručníků, osušek a županů</p>
+								</li>
+								<li>
+									<p>Pravidelný svoz a rozvoz prádla</p>
+								</li>
 							</ul>
-							<a href='#' data-link-hidden='true'>
-								<AnimatedButton data-dark-bg={true}>Poptávka</AnimatedButton>
-							</a>
 						</AnimatedTextGroup>
+						<AnimatedButton url='#' data-dark-bg={true}>
+							Poptávka
+						</AnimatedButton>
 					</Container>
 				</section>
 			</main>

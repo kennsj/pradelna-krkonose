@@ -16,9 +16,9 @@ const Nav = () => {
 				<Link to='/references'>Reference</Link>
 				<Link to='/how-it-works'>Jak to funguje</Link>
 				<Link to='/contact'>Kontakt</Link>
-				<Link to='/about' data-link-hidden='true'>
-					<AnimatedButton>Poptávka</AnimatedButton>
-				</Link>
+				<AnimatedButton url='#' className={styles["nav-button"]}>
+					Poptávka
+				</AnimatedButton>
 			</div>
 			<button
 				className={`${styles["mobile-menu-btn"]} ${menuOpen ? styles.active : ""}`}
@@ -32,6 +32,7 @@ const Nav = () => {
 			{menuOpen && (
 				<div className={styles["mobile-menu"]}>
 					<Link
+						className={styles["mobile-menu-link"]}
 						to='/services'
 						onClick={() => setMenuOpen(false)}
 						data-link-hidden='true'
@@ -39,6 +40,7 @@ const Nav = () => {
 						Služby
 					</Link>
 					<Link
+						className={styles["mobile-menu-link"]}
 						to='/references'
 						onClick={() => setMenuOpen(false)}
 						data-link-hidden='true'
@@ -46,6 +48,7 @@ const Nav = () => {
 						Reference
 					</Link>
 					<Link
+						className={styles["mobile-menu-link"]}
 						to='/how-it-works'
 						onClick={() => setMenuOpen(false)}
 						data-link-hidden='true'
@@ -53,19 +56,21 @@ const Nav = () => {
 						Jak to funguje
 					</Link>
 					<Link
+						className={styles["mobile-menu-link"]}
 						to='/contact'
 						onClick={() => setMenuOpen(false)}
 						data-link-hidden='true'
 					>
 						Kontakt
 					</Link>
-					<Link
-						to='/about'
-						data-link-hidden='true'
+
+					<AnimatedButton
+						className={styles["nav-button"]}
+						url='#'
 						onClick={() => setMenuOpen(false)}
 					>
-						<AnimatedButton>Poptávka</AnimatedButton>
-					</Link>
+						Poptávka
+					</AnimatedButton>
 				</div>
 			)}
 		</nav>

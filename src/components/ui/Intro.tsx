@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router"
 import { Heading } from "./Heading"
 import { AnimatedParagraph } from "./AnimatedParagraph"
 import { AnimatedButton } from "./AnimatedButton"
@@ -7,8 +6,8 @@ type IntroProps = {
 	overline?: string
 	title?: string
 	paragraph?: string
-	button?: string
 	link?: string
+	url?: string
 	children?: React.ReactNode
 	align?: "left" | "center" | "right"
 	centered?: boolean
@@ -20,8 +19,8 @@ const Intro = ({
 	overline,
 	title,
 	paragraph,
-	button,
 	link,
+	url,
 	children,
 	align = "center",
 	centered = false,
@@ -40,15 +39,10 @@ const Intro = ({
 			{paragraph && (
 				<AnimatedParagraph animate={animate}>{paragraph}</AnimatedParagraph>
 			)}
-			{button && (
-				<Link to='/'>
-					<AnimatedButton>{button}</AnimatedButton>
-				</Link>
-			)}
-			{link && (
-				<Link to='/' className='link'>
+			{url && (
+				<AnimatedButton url={url} className='link'>
 					{link}
-				</Link>
+				</AnimatedButton>
 			)}
 			{children}
 		</div>

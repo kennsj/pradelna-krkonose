@@ -1,6 +1,7 @@
 import Intro from "../../ui/Intro"
 import styles from "./Contact.module.css"
 import { AnimatedButton } from "../../ui/AnimatedButton"
+import ContactForm from "./ContactForm"
 
 const Contact = () => {
 	return (
@@ -46,59 +47,7 @@ const Contact = () => {
 				</div>
 			</div>
 			<div className={styles["contact-form"]}>
-				<form>
-					<div className={styles["form-group"]}>
-						<label>Typ provozu</label>
-						<select required>
-							<option value=''>Vyberte</option>
-							<option value='hotel'>Hotel</option>
-							<option value='pension'>Pension</option>
-							<option value='restaurace'>Restaurace</option>
-							<option value='chata'>Chata</option>
-							<option value='jine'>Jiné</option>
-						</select>
-					</div>
-					<div className={styles["form-group"]}>
-						<label>Jméno a příjmení</label>
-						<input id='name' type='text' placeholder='Jan Novák' required />
-					</div>
-					<div className={styles["form-row"]}>
-						<div className={styles["form-group"]}>
-							<label>Telefon</label>
-							<input
-								id='phone'
-								type='tel'
-								placeholder='+420 77x xxx xxx'
-								required
-							/>
-						</div>
-						<div className={styles["form-group"]}>
-							<label>Email</label>
-							<input
-								id='email'
-								type='email'
-								placeholder='novak@email.com'
-								required
-							/>
-						</div>
-					</div>
-					<div className={styles["form-group"]}>
-						<label>Poznámka</label>
-						<textarea
-							placeholder='Objčem, velikost zařízení...'
-							required
-						></textarea>
-					</div>
-					<div className={styles["form-footer"]}>
-						<div>
-							<AnimatedButton type='submit'>Odeslat poptávku</AnimatedButton>
-							<a href='#' data-link-hidden='true'>
-								Raději voláte?
-							</a>
-						</div>
-						<p>Ozveme se do 24 hodin. Bez zbytečných.</p>
-					</div>
-				</form>
+				<ContactForm />
 			</div>
 		</div>
 	)

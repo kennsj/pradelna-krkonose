@@ -3,25 +3,24 @@ import gsap from "gsap"
 import { SplitText } from "gsap/SplitText"
 import { prefersReducedMotion } from "../../utils/prefersReducedMotion"
 import styles from "./AnimatedButton.module.css"
+import { Link } from "@tanstack/react-router"
 
 type AnimatedButtonProps = {
+	url: string
 	children: React.ReactNode
 	onClick?: () => void
 	className?: string
-	type?: "button" | "submit" | "reset"
-	disabled?: boolean
 	"data-dark-bg"?: boolean
 }
 
 export function AnimatedButton({
+	url,
 	children,
 	onClick,
 	className,
-	type = "button",
-	disabled = false,
 	"data-dark-bg": dataDarkBg,
 }: AnimatedButtonProps) {
-	const buttonRef = useRef<HTMLButtonElement>(null)
+	const anchorRef = useRef<HTMLAnchorElement>(null)
 	const originalTextRef = useRef<HTMLSpanElement>(null)
 	const hiddenTextRef = useRef<HTMLSpanElement>(null)
 	const backgroundRef = useRef<HTMLSpanElement>(null)
@@ -29,7 +28,7 @@ export function AnimatedButton({
 
 	useEffect(() => {
 		if (
-			!buttonRef.current ||
+			!anchorRef.current ||
 			!originalTextRef.current ||
 			!hiddenTextRef.current ||
 			!backgroundRef.current ||
@@ -37,7 +36,7 @@ export function AnimatedButton({
 		)
 			return
 
-		const button = buttonRef.current
+		const anchor = anchorRef.current
 
 		gsap.registerPlugin(SplitText)
 
@@ -138,23 +137,23 @@ export function AnimatedButton({
 			)
 		}
 
-		button.addEventListener("mouseenter", handleMouseEnter)
-		button.addEventListener("mouseleave", handleMouseLeave)
+		anchor.addEventListener("mouseenter", handleMouseEnter)
+		anchor.addEventListener("mouseleave", handleMouseLeave)
 
 		return () => {
-			button.removeEventListener("mouseenter", handleMouseEnter)
-			button.removeEventListener("mouseleave", handleMouseLeave)
+			anchor.removeEventListener("mouseenter", handleMouseEnter)
+			anchor.removeEventListener("mouseleave", handleMouseLeave)
 		}
 	}, [children])
 
 	return (
-		<button
-			ref={buttonRef}
+		<Link
+			to={url}
+			ref={anchorRef}
 			onClick={onClick}
 			className={`${styles.animatedButton} ${className || ""}`}
-			type={type}
-			disabled={disabled}
 			data-dark-bg={dataDarkBg}
+			data-type-button
 		>
 			<span ref={backgroundRef} className={styles.background}></span>
 			<span ref={originalTextRef} className={styles.text}>
@@ -163,6 +162,6 @@ export function AnimatedButton({
 			<span ref={hiddenTextRef} className={styles.hiddenText}>
 				{children}
 			</span>
-		</button>
+		</Link>
 	)
 }

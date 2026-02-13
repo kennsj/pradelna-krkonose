@@ -3,7 +3,6 @@ import styles from "./Hero.module.css"
 import gsap from "gsap"
 import { SplitText } from "gsap/SplitText"
 import { useRef, useLayoutEffect } from "react"
-import { Link } from "@tanstack/react-router"
 import { prefersReducedMotion } from "../../../utils/prefersReducedMotion"
 import { AnimatedButton } from "../../ui/AnimatedButton"
 
@@ -113,11 +112,7 @@ const Hero = ({ img, title, subtitle, link, url }: HeroProps) => {
 					{subtitle}
 				</p>
 
-				{link && url && (
-					<Link to={url} ref={buttonRef}>
-						<AnimatedButton>{link}</AnimatedButton>
-					</Link>
-				)}
+				{link && url && <AnimatedButton url={url}>{link}</AnimatedButton>}
 			</div>
 		</header>
 	)

@@ -15,10 +15,10 @@
 	}
 
 	.card {
-		background: var(--secondary-color);
+		background: var(--white-bg-color);
 		border-radius: var(--border-radius-big);
 		padding: 5rem 16px 2rem 16px;
-		color: var(--primary-color);
+		color: var(--secondary-color);
 		text-align: center;
 		display: grid;
 		gap: 10px;
@@ -44,6 +44,7 @@
 			font-size: 14px;
 			line-height: 24px;
 			color: var(--white-color);
+			color: var(--secondary-color);
 		}
 	}
 }

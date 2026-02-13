@@ -9,19 +9,10 @@
 	-moz-osx-font-smoothing: grayscale;
 
 	background: #f5f5f4;
-	/* background: #11243b; */
-
-	/* --primary-color: #fcb627; */
-	/* --secondary-color: #079aae; */
-	/* --tertiary-color: #dbeafe; */
 
 	--primary-color: #eed5a4;
-	--secondary-color: #0c4249;
+	--secondary-color: #079aae;
 	--tertiary-color: #caa14e;
-
-	/* --primary-color: #0ea5e9;
-	--secondary-color: #06b6d4;
-	--tertiary-color: #e0f2fe; */
 
 	--white-color: #ffffff;
 	--white-bg-color: #f8fafc;
@@ -185,6 +176,12 @@ a {
 
 		&:hover::before {
 			transform: none;
+		}
+	}
+
+	&[data-type-button] {
+		&::before {
+			display: none;
 		}
 	}
 }

@@ -9,6 +9,8 @@ const Services = () => {
 		yPercent: 10,
 		opacity: 0,
 		stagger: 0.1,
+		duration: 0.8,
+		ease: "easeInOut",
 	})
 
 	return (
